@@ -1,0 +1,23 @@
+<div class="heading " style="width: 18rem">
+    <div class="card-body">
+        <h5 class="card-title">Welcome</h5>
+        <p class="card-text">
+            With supporting text below as a natural lead-in to additional content.
+        </p>
+        <a href="#" class="btn btn-primary">See transction</a>
+        <div>
+            You have {{transdata.length}} transactions
+        </div>
+    </div>
+</div>
+
+<div class="wrapper-card">
+    <div class="card" style="width: 18rem" *ngFor="let trans of transdata">
+        <div class="card-body">
+          <h5 class="card-title">{{ trans._id }}</h5>
+          <p class="card-text">{{ trans.type }}</p>
+          <a class="btn btn-primary"  [routerLink]="['/type']">See all</a>
+        </div>
+      </div>
+</div>
+
